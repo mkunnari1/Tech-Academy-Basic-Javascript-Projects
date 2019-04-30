@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        button{font-size: 1.5em; font-weight: bold;height: 75px; width: 100px;}
+        </style>
+    </head>
+  <body>
+    <h1 id="countdown">Click button for colors!!!</h1>
+    <br><br>
+    <button class="btn" onclick="up()">Start!</button>
+
+    <script>
+
+var i=0;
+        var myArray= [10,9,8,7,6,5,4,3,2,1,"HAPPY NEW YEAR!"];
+        function random_rgba() {
+    var o = Math.round, r = Math.random, s = 255;
+    return 'rgba(' + o(r()*s) + ',' + o(r()*s) + ',' + o(r()*s) + ',' + r().toFixed(1) + ')';
+}
+
+var color2 = random_rgba();
+
+g.fillStyle   = color;
+g.strokeStyle = color;
+
+       
+        function up() {
+            if(i<myArray.length) {
+                document.getElementById('countdown').style.color= color2 ;
+                document.getElementById('countdown').innerHTML = myArray[i];
+                i++;
+            }
+            window.setTimeout(up,250);
+        };
+    </script>
+  </body>
+</html>

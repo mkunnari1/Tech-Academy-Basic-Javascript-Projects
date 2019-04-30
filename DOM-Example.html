@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>The DOM</title>
+        <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+        <script src="main.js"></script>
+
+    </head>
+    <body>
+        <div>
+            <h1>The Document Object Model</h1>
+            <p>
+                The Dom is a logical sturcture of an abstraction of XML/HTML data.
+            </p>
+        </div>
+        <div>
+            <p>
+                The DOM will arragne HTML elements in a tree-like data structure.
+            </p>
+        </div>
+        <script>
+            function changetext(){
+                let pElements = document.getElementsByTagName("p");
+                for (let n=0; n<pElements.length; n++) {
+                    pElements[n].innerHTML = "New text";
+                }
+            }
+
+            setTimeout( changetext, 2000);
+        </script>
+    </body>
+</html>
